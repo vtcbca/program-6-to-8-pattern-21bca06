@@ -1,23 +1,31 @@
-/* WAP to print following pattern
-*
-**
-***
-****
-*****
-DATE : 26/01/2022 */
+/*write a program to print following pattern:
+
+	  1
+       2  1  2
+  3  2  1  2   3
+Date:29-dec-2021*/
+
 #include<stdio.h>
 #include<conio.h>
 void main()
 {
-	int i,j,n;
-	clrscr();
-	printf("enter a number till you are draw patttern:");
-	scanf("%d",&n);
-	for(i=1;i<=n;i++)
-		{
-			for(j=1;j<i;j++)
-				printf("*");
-			printf("\n");
-		}
-	getch();
+     int i,j,space,k;
+    clrscr();
+    for(i=1;i<=3;i++)
+    {
+	for(space=1;space<=3-i;space++)
+	{
+	printf(" ");
+	}
+    for(k=i;k>=1;k--)
+	{
+	printf("%d ", k);
+	}
+    for(j=2;j<=i;j++)
+	{
+	printf("%d ", j);
+	}
+     printf("\n");
+     }
+    getch();
 }
